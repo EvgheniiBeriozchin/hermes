@@ -7,7 +7,7 @@ import target from "./target.png"
 import scale from "./scale.png"
   
   export default function Slider(props) {
-    console.log(props.slides)
+    const link = "https://www.bbc.com/future/article/20220929-how-outdoor-play-boosts-kids-immune-systems"
     return (
       <div className="slide-container">
         <Fade>
@@ -15,7 +15,7 @@ import scale from "./scale.png"
             <div key={source} className="slide">
               <p>{media}</p>
               <img src={source} className="slide-image"/>
-              <p>{props.text}</p>
+              <p><a href={link}>{props.text}</a></p>
               <div>
                 {[...Array(accuracy)].map((i) => <img src={pen} className="citations" />)}
                 {[...Array(accuracy)].map((i) => <img src={target} className="accuracy"/>)}
